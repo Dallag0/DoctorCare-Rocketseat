@@ -2,7 +2,11 @@
 
 ![rockeseat](./assets/rocketseat.svg)
 
-O projeto está sendo feito com o auxilio da semana "NLW RETUNN - MISSION ORIGIN" feito pela [rocketseat](https://www.rocketseat.com.br), onde aprenderemos a criar uma pagina com responsividade e acessibilidade.
+O projeto está sendo feito com o auxilio da semana:
+
+"NLW RETUNN - MISSION ORIGIN"
+ 
+feito pela [rocketseat](https://www.rocketseat.com.br), onde aprenderemos a criar uma pagina com responsividade e acessibilidade.
 
 ## Projeto
 
