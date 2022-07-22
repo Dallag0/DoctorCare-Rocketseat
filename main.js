@@ -2,12 +2,26 @@
 
 const nav = document.getElementById('navigation')
 const button = document.getElementsByClassName('openMenu')
+const UpButton = document.getElementById('BackTopButton')
 
 function onScroll() {
-  if(scrollY > 0) {
+  NavOnScroll()
+  ShowBackToTopButton()
+}
+
+function NavOnScroll() {
+  if (scrollY > 0) {
     nav.classList.add('scroll')
   } else {
     nav.classList.remove('scroll')
+  }
+}
+
+function ShowBackToTopButton() {
+  if (scrollY > 500) {
+    UpButton.classList.add('show')
+  } else {
+    UpButton.classList.remove('show')
   }
 }
 
