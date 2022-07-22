@@ -10,6 +10,7 @@
   --secundary-color: #212529;
   --terciary-color: #495057;
   --quadriary-color: #fffaf1;
+  --quintary-color: #f7f9f9;
 }
 
 * {
@@ -32,6 +33,10 @@
 =======HTML E BODY / GENEREAL INFORMATION=======
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   width: 100%;
@@ -42,6 +47,7 @@ body {
   overflow: overlay;
   text-align: center;
   font-family: 'DM Sans', sans-serif;
+  background-color: var(--quintary-color);
 }
 
 ul {
@@ -52,18 +58,22 @@ a {
   text-decoration: none;
 }
 
+section {
+  padding-block: 6.25rem;
+}
+
 /*
 =======NAVIGATION=======
 */
 
 nav {
   top: 0;
-  left: 50%;
+  width: 100vw;
+  z-index: 100;
   display: flex;
   position: fixed;
   padding-inline: 0.3125rem;
   height: var(--nav-height);
-  transform: translateX(-50%);
 }
 
 nav svg:nth-child(1) {
@@ -81,7 +91,6 @@ nav .wrapper {
 }
 
 nav.scroll {
-  width: 100vw;
   background-color: var(--primary-color);
 }
 
@@ -117,12 +126,16 @@ nav button:nth-child(4) {
 =======MENU OPEN=======
 */
 
+.menu {
+  transform: translateY(100%);
+}
+
 body.menuExpanded {
   overflow: hidden;
 }
 
 body.menuExpanded > :not(nav) {
-  display: none;
+  visibility: hidden;
 }
 
 .menu,
@@ -144,12 +157,10 @@ body.menuExpanded .menu {
   width: 100vw;
   height: 100vh;
   position: fixed;
+  transition: transform 500ms;
+  transform: translateY(0);
   padding-top: var(--nav-height);
   background-color: var(--primary-color);
-}
-
-body.menuExpanded nav {
-  position: relative;
 }
 
 body.menuExpanded button:nth-child(1) {
@@ -210,7 +221,7 @@ body.menuExpanded a:nth-child(1) path {
 
 body.menuExpanded .closeMenu path {
   cursor: pointer;
-  transition: 0.5s;
+  transition: 5.5s;
   stroke: var(--white);
 }
 
@@ -218,7 +229,7 @@ body.menuExpanded .closeMenu path {
 =======HEADER=======
 */
 
-header::before {
+#home::before {
   top: 0;
   left: 0;
   z-index: -1;
@@ -230,8 +241,8 @@ header::before {
   background-color: var(--background);
 }
 
-header {
-  margin-top: calc(4.1rem + var(--nav-height));
+#home {
+  padding-top: calc(4.1rem + var(--nav-height));
 }
 
 /*
@@ -254,29 +265,29 @@ h4,
   font-weight: 700;
 }
 
-h1 {
+#home h1 {
   font-size: 2.125rem;
   line-height: 2.75rem;
   margin-bottom: 1.5rem;
   color: var(--secundary-color);
 }
 
-h3 {
+#home h3 {
   font-size: 3rem;
   line-height: 3.9375rem;
   color: var(--secundary-color);
 }
 
-h3:nth-child(1) {
+#home h3:nth-child(1) {
   margin-top: 2.5rem;
 }
 
-h4 {
+#home h4 {
   margin-bottom: 1rem;
   line-height: 1.3125rem;
 }
 
-h4,
+#home h4,
 .whatsapp {
   font-size: 0.875rem;
   text-transform: uppercase;
@@ -301,7 +312,7 @@ h4,
   background-color: var(--primary-color);
 }
 
-p {
+#home p {
   font-weight: 400;
 }
 
@@ -337,4 +348,97 @@ p {
   border-radius: 0.375rem;
   border: 0.125rem solid var(--background);
   background-color: var(--quadriary-color);
+}
+
+/*
+=======SERVICES=======
+*/
+
+#services h2 {
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.4375rem;
+  margin: 1rem 0 3.75rem 0;
+  color: var(--secundary-color);
+}
+
+#services h4 {
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.9531rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+/*
+=======CARDS=======
+*/
+
+#services .cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  padding: 1.5rem;
+  text-align: left;
+  margin-bottom: 2rem;
+  border-radius: 0.375rem;
+  background-color: var(--white);
+  border: 0.0625rem solid var(--background);
+}
+
+.card h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-block: 1rem;
+  line-height: 1.9531rem;
+  color: var(--secundary-color);
+}
+
+.card p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-block: 1rem;
+  line-height: 1.5rem;
+  color: var(--terciary-color);
+}
+
+/*
+=======ABOUT=======
+*/
+
+#about {
+  background-color: var(--quadriary-color);
+}
+
+#about h4,
+#about h2,
+.content p {
+  text-align: left;
+}
+
+#about h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 2.4375rem;
+  margin: 1rem 0 1.5rem 0;
+  color: var(--secundary-color);
+}
+
+#about h4 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.3125rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.content p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-bottom: 4.125rem;
+  color: var(--terciary-color);
 }
