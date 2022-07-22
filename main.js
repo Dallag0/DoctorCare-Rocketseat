@@ -18,3 +18,19 @@ function openMenu() {
 function closeMenu() {
   document.body.classList.remove('menuExpanded')
 }
+
+ScrollReveal({
+  origin: 'top',
+  distance: '1.875rem',
+  duration: 2000,
+}).reveal(`
+  #home,
+  #home img,
+  #home .information,
+  #services,
+  #services header,
+  #services .card,
+  #about,
+  #about header,
+  #about .content
+  `)
