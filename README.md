@@ -10,6 +10,8 @@ feito pela [rocketseat](https://www.rocketseat.com.br), onde aprenderemos a cria
 
 ## Projeto
 
+Projeto do [Figma](https://www.figma.com/file/kc59zTXoZq6mZ22lPfzZVE/DoctorCare-(Community)?node-id=1716%3A251)
+
 projeto para desktop | projeto para mobile
 
 ![DesktopProject](./assets/projeto%20pc.png)
